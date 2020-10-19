@@ -9,9 +9,18 @@ export function Home() {
 	console.log(color);
 	return (
 		<div className="text-center mt-5">
-			<div className="circle red" onClick={() => setColor("red")} />
-			<div className="circle ambar" onClick={() => setColor("yellow")} />
-			<div className="circle green" onClick={() => setColor("green")} />
+			<div
+				className={"circle red " + color == "red" ? "selected" : ""}
+				onClick={() => setColor("red")}
+			/>
+			<div
+				className={"circle ambar " + color == "ambar" ? "selected" : ""}
+				onClick={() => setColor("ambar")}
+			/>
+			<div
+				className={"circle green " + color == "green" ? "selected" : ""}
+				onClick={() => setColor("green")}
+			/>
 		</div>
 	);
 }
