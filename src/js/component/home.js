@@ -8,23 +8,28 @@ export function Home() {
 	const [color, setColor] = useState("red");
 	console.log(color);
 	return (
-		<div className="box">
-			<div
-				className={"circle red " + (color == "red" ? "selected" : "")}
-				onClick={() => setColor("red")}
-			/>
-			<div
-				className={
-					"circle ambar " + (color == "ambar" ? "selected" : "")
-				}
-				onClick={() => setColor("ambar")}
-			/>
-			<div
-				className={
-					"circle green " + (color == "green" ? "selected" : "")
-				}
-				onClick={() => setColor("green")}
-			/>
+		<div className="text-center mt-5">
+			<div className="box">
+				<div
+					className={
+						"circle red " + (color == "red" ? "selected" : "")
+					}
+					onClick={() => setColor("red")}
+				/>
+				<div
+					className={
+						"circle ambar " + (color == "ambar" ? "selected" : "")
+					}
+					onClick={() => setColor("ambar")}
+				/>
+				<div
+					className={
+						"circle green " + (color == "green" ? "selected" : "")
+					}
+					onClick={() => setColor("green")}
+				/>
+			</div>
+			<div className="palo" />
 		</div>
 	);
 }
